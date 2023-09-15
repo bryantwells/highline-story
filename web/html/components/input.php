@@ -1,29 +1,53 @@
-<section>
+<section 
+	class="Section Section--input">
 
-	<header>
-		<h2>Input</h2>
-	</header>
+	<section 
+		class="Section-body Section-body--input">
 
-	<section>
+		<form 
+			class="Form Form--post"
+			action="/actions/post.php" 
+			method="post">
 
-		<form action="/actions/post.php" method="post">
+			<? foreach ($questions as $i => $question): ?>
 
-			<label for="q1">Q1:</label>
-			<textarea id="q1" name="q1" required></textarea><br><br>
+				<? $id = 'q' . $i + 1 ?>
 
-			<label for="q2">Q2:</label>
-			<textarea id="q2" name="q2" required></textarea><br><br>
+				<div class="Form-question">
 
-			<label for="q3">Q3:</label>
-			<textarea id="q3" name="q3" required></textarea><br><br>
+					<h2 class="Form-questionHeader">
+						<?= $questions[$i]['title'] ?>
+					</h2>
 
-			<label for="q4">Q4:</label>
-			<textarea id="q4" name="q4" required></textarea><br><br>
+					<div class="Form-inputGroup">
+						<label 
+							class="Form-label" 
+							for="<?= $id ?>">
+							<?= $questions[$i]['label'] ?>...
+						</label>
 
-			<input type="submit" value="Submit">
+						<div class="Form-textWrapper">
+							<textarea 
+								class="Form-input Form-input--textarea" 
+								rows="2"
+								id="<?= $id ?>" 
+								name="<?= $id ?>" 
+								onInput="this.parentNode.dataset.replicatedValue = this.value"
+								required></textarea>
+						</div>
+					</div>					
+
+				</div>
+
+			<? endforeach; ?>
+
+			<input 
+				class="Button Button--submit" 
+				type="submit" 
+				value="Submit">
 
 		</form>
-		
+
 	</section>
 
 </section>

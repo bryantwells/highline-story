@@ -1,0 +1,150 @@
+html {
+	font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	font-size: unset;
+	font-weight: unset;
+}
+
+p {
+	margin: 0;
+}
+
+p:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+textarea {
+	resize: none;
+}
+
+textarea, button, input {
+	font-size: unset;
+	font-family: unset;
+}
+
+body {
+	padding: 1rem;
+}
+
+.Header {
+	max-width: 50ch;
+	text-align: center;
+	padding: 1rem;
+	margin: auto;
+}
+
+.Section {
+	display: grid;
+	gap: 1rem;
+	padding: 1rem;
+	max-width: 50ch;
+	margin: auto;
+}
+
+.Section-header {
+	text-align: center;
+}
+
+.Section--admin {
+	max-width: unset;
+}
+
+.Section--viewer {
+	gap: 0;
+}
+
+.Section-body--admin {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 1rem;
+	align-items: start;
+}
+
+.Footer {
+	margin: auto;
+	max-width: 50ch;
+}
+
+.Form {
+	display: grid;
+	gap: 1rem;
+}
+
+.Form-response {
+	text-align: left;
+	background-color: beige;
+	padding: 1rem;
+	border-radius: 5px;
+}
+
+.Form-question {
+	display: grid;
+	background-color: beige;
+	padding: 0.75rem;
+	border-radius: 5px;
+}
+
+.Form-inputGroup {
+	display: grid;
+	gap: 0.25rem;
+}
+
+.Form-buttonGroup {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: 1fr 1fr;
+}
+
+.Form-questionHeader {
+	color: black;
+	margin-bottom: 1rem;
+}
+
+.Form-textWrapper {
+	display: grid;
+}
+
+.Form-textWrapper::after {
+	content: attr(data-replicated-value) " ";
+	white-space: pre-wrap;
+	visibility: hidden;
+}
+
+.Form-input--textarea {
+	resize: none;
+	overflow: hidden;
+}
+
+.Form-textWrapper::after,
+.Form-input--textarea {
+	border: none;
+	padding: 0.5rem;
+	font: inherit;
+	grid-area: 1 / 1 / 2 / 2;
+	border-radius: 5px;
+}
+
+.Button {
+	padding: 0.5rem;
+	cursor: pointer;
+	background-color: beige;
+	border-radius: 5px;
+	border: 1px solid sandybrown;
+}
+
+.Button:hover {
+	background: sandybrown;
+}
+
+.Page--home {
+	background-color: beige;
+}
+
+.Footer {
+	font-style: italic;
+	padding: 1rem;
+	max-width: 50ch;
+}

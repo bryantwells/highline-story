@@ -1,34 +1,67 @@
-<section>
+<section
+	class="Section Section--admin">
 
-	<header>
-		<h2>Admin</h2>
-	</header>
+	<section
+		class="Section-body Section-body--admin">
 
-	<section>
-		<?php foreach ($data as $index => $entry): ?>
+		<? foreach ($data as $rId => $responseArray): ?>
 
-			<form action="/actions/delete.php" method="post">
-				<input type="hidden" name="delete" value="<?= $index ?>" />
-				<p>
-					Q1: 
-					<br><?= $entry['q1'] ?>
-				</p>
-				<p>
-					Q2:
-					<br><?= $entry['q2'] ?>
-				</p>
-				<p>
-					Q3: 
-					<br><?= $entry['q3'] ?>
-				</p>
-				<p>
-					Q4: 
-					<br><?= $entry['q4'] ?>
-				</p>
-				<input type="submit" value="Delete">
+			<form 
+				class="Form Form-response"
+				action="/actions/update.php" 
+				method="post">
+
+				<? $i = 0; ?>
+
+				<? foreach ($responseArray as $response): ?>
+
+					<? $qId = 'q' . $i + 1 ?>
+
+					<div class="Form-inputGroup">
+						<label class="Form-label">
+							<?= $questions[$i]['label'] ?>...
+						</label>
+
+						<div 
+							class="Form-textWrapper">
+							<textarea
+								class="Form-input Form-input--textarea"
+								rows="1"
+								id="<?= $qId ?>" 
+								name="<?= $qId ?>" 
+								onInput="this.parentNode.dataset.replicatedValue = this.value"><?= 
+								$response
+							?></textarea>
+						</div>
+					</div>
+
+					<? $i++; ?>
+					
+				<? endforeach; ?>
+
+				<div class="Form-buttonGroup">
+					<input 
+						class="Button Button--delete"
+						type="submit" 
+						value="Delete"
+						name="delete">
+					<input 
+						class="Button Button--update"
+						type="submit" 
+						value="Update"
+						name="update">
+				</div>
+				
+				<input 
+					type="hidden" 
+					name="index" 
+					value="<?= $rId ?>"
+				/>
+
 			</form>
 
-		<?php endforeach; ?>
+		<? endforeach; ?>
+
 	</section>
 
 </section>

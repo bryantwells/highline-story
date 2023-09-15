@@ -8,17 +8,17 @@ forms.forEach((form) => {
 		// Create a FormData object from the form
 		const formData = new FormData(form);
 
+		// Add submit button value
+		formData.append(e.submitter.name, e.submitter.value);
+
 		// Send a POST request to your PHP script
 		fetch(form.action, {
 			method: 'POST',
 			body: formData
 		})
-		.then(function(response) {
-			if (response.ok) {
-				console.log('Data submitted successfully.');
-			} else {
-				console.log('Error submitting data.');
-			}
+		.then(async function(response) {
+			const body = await response.text();
+			console.log(body);
 		})
 		.catch(function(error) {
 			console.error('Error:', error);
@@ -27,4 +27,9 @@ forms.forEach((form) => {
 			location.reload();
 		});
 	});
+});
+
+const textareas = [...document.querySelectorAll('textarea')];
+textareas.forEach((textarea) => {
+	textarea.parentNode.dataset.replicatedValue = textarea.value;
 });
