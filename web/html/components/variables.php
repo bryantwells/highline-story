@@ -19,7 +19,7 @@
 		],
 		[
 			'title' => 'How would you make the climate healthy for us, our children, and our seniors?',
-			'label' => 'To make a healthy climate, I would',
+			'label' => 'For a healthier climate, I would',
 			'separator' => '. I would ',
 		]
 	];
