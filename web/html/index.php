@@ -10,13 +10,15 @@
 
 	<header class="Header">
 		<h1>
-			Climate Control noe
+			Climate Control
 			<br> A 10th Ave. Story
 		</h1>
 	</header>
 
-	<? include('components/variables.php') ?>
-	<? include('components/viewer.php') ?>
+
+
+	<? include(__DIR__ . '/components/variables.php') ?>
+	<? include(__DIR__ . 'components/viewer.php') ?>
 
 	<footer class="Footer">
 		<p>
