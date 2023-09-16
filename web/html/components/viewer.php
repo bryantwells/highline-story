@@ -1,5 +1,9 @@
 <?php 
 
+	echo 'one';
+
+	echo var_dump($data);
+
 	// Initialize arrays to group data by properties
 	$responseArrays = [];
 
