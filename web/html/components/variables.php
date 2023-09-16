@@ -1,6 +1,8 @@
 <?php  
 	$dataFile = __DIR__ . '/../data.json'; 
 	$data = file_exists($dataFile) ? json_decode(file_get_contents($dataFile), true) : [];
+	echo $dataFile;
+	echo var_dump($dataFile);
 	$questions = [
 		[
 			'title' => 'In 3 words, who are you?',
