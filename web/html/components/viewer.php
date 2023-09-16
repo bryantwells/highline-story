@@ -37,7 +37,7 @@
 					$r 
 				?></span><span><?= 
 					($j < count($responseArray) - 1) ? $questions[$i]['separator'] : '.'
-				?></span><?
+				?></span><?php
 			
 			$j++;
 			endforeach; ?>
