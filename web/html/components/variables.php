@@ -22,5 +22,5 @@
 			'label' => 'To make a healthy climate, I would',
 			'separator' => '. I would ',
 		]
-	]
+	];
 ?>
