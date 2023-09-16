@@ -15,9 +15,6 @@
 		</h1>
 	</header>
 
-
-	<?= __DIR__ . '/components/variables.php' ?>
-	<?= file_exists(__DIR__ . '/components/variables.php') ?>
 	<?php include(__DIR__ . '/components/variables.php') ?>
 	<?php include(__DIR__ . '/components/viewer.php') ?>
 
