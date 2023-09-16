@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 	// Initialize arrays to group data by properties
 	$responseArrays = [];
@@ -16,9 +16,9 @@
 <section
 	class="Section Section--viewer">
 
-	<? $i = 0 ?>
+	<?php $i = 0 ?>
 
-	<?php foreach ($responseArrays as $responseArray): ?>
+	<?php  foreach ($responseArrays as $responseArray): ?>
 
 		<p class="Section-body">
 
@@ -26,9 +26,9 @@
 				<?= $questions[$i]['label'] ?>
 			</span>
 
-			<? $j = 0 ?>
+			<?php $j = 0 ?>
 
-			<? foreach ($responseArray as $r): 
+			<?php foreach ($responseArray as $r): 
 
 				?><span><?= 
 					$r 
@@ -41,9 +41,9 @@
 
 		</p>
 
-		<? $i++; ?>
+		<?php $i++; ?>
 
-	<?php endforeach; ?>
+	<?php  endforeach; ?>
 
 </section>
 

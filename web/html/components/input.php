@@ -9,9 +9,9 @@
 			action="/actions/post.php" 
 			method="post">
 
-			<? foreach ($questions as $i => $question): ?>
+			<?php foreach ($questions as $i => $question): ?>
 
-				<? $id = 'q' . $i + 1 ?>
+				<?php $id = 'q' . $i + 1 ?>
 
 				<div class="Form-question">
 
@@ -39,7 +39,7 @@
 
 				</div>
 
-			<? endforeach; ?>
+			<?php endforeach; ?>
 
 			<input 
 				class="Button Button--submit" 

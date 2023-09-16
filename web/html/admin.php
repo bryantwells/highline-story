@@ -8,8 +8,8 @@
 </head>
 <body>
 
-	<? include('components/variables.php') ?>
-	<? include('components/admin.php') ?>
+	<?php include('components/variables.php') ?>
+	<?php include('components/admin.php') ?>
 
 	<script src="/assets/js/main.js"></script>
 	

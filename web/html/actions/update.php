@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 	// Read the data from the JSON file
 	if (file_exists('../data.json')) {

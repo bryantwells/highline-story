@@ -4,18 +4,18 @@
 	<section
 		class="Section-body Section-body--admin">
 
-		<? foreach ($data as $rId => $responseArray): ?>
+		<?php foreach ($data as $rId => $responseArray): ?>
 
 			<form 
 				class="Form Form-response"
 				action="/actions/update.php" 
 				method="post">
 
-				<? $i = 0; ?>
+				<?php $i = 0; ?>
 
-				<? foreach ($responseArray as $response): ?>
+				<?php foreach ($responseArray as $response): ?>
 
-					<? $qId = 'q' . $i + 1 ?>
+					<?php $qId = 'q' . $i + 1 ?>
 
 					<div class="Form-inputGroup">
 						<label class="Form-label">
@@ -35,9 +35,9 @@
 						</div>
 					</div>
 
-					<? $i++; ?>
+					<?php $i++; ?>
 					
-				<? endforeach; ?>
+				<?php endforeach; ?>
 
 				<div class="Form-buttonGroup">
 					<input 
@@ -60,7 +60,7 @@
 
 			</form>
 
-		<? endforeach; ?>
+		<?php endforeach; ?>
 
 	</section>
 
