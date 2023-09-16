@@ -15,6 +15,7 @@
 		</h1>
 	</header>
 
+	<?php include_once(__DIR__ . '/components/viewer.php'); ?>
 
 	<footer class="Footer">
 		<p>
