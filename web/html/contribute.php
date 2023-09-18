@@ -11,7 +11,7 @@
 	<?php include('components/variables.php') ?>
 	<?php include('components/input.php') ?>
 
-	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/textarea.js"></script>
 	
 </body>
 </html>

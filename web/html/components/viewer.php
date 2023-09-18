@@ -1,14 +1,14 @@
 <?php 
 
 	// Initialize arrays to group data by properties
-	$responseArrays = [];
+	$chapters = [];
 
 	// Iterate over the data and group it by properties
-	foreach ($data as $response) {
-		$responseArrays[0][] = $response['q1'];
-		$responseArrays[1][] = $response['q2'];
-		$responseArrays[2][] = $response['q3'];
-		$responseArrays[3][] = $response['q4'];
+	foreach ($entries as $entry) {
+		$chapters[0][] = $entry['responses']['q1'];
+		$chapters[1][] = $entry['responses']['q2'];
+		$chapters[2][] = $entry['responses']['q3'];
+		$chapters[3][] = $entry['responses']['q4'];
 	}
 
 ?>
@@ -16,33 +16,26 @@
 <section
 	class="Section Section--viewer">
 
-	<?php $i = 0 ?>
+	<?php $chapterIndex = 0 ?>
 
-	<?php  foreach ($responseArrays as $responseArray): ?>
+	<?php  foreach ($chapters as $chapter): ?>
 
 		<p class="Section-body">
 
-			<span>
-				<?= $questions[$i]['label'] ?>
-			</span>
+			<?php $responseIndex = 0 ?>
 
-			<?php $j = 0 ?>
+			<?php foreach ($chapter as $response): ?>
 
-			<?php foreach ($responseArray as $r): 
+				<span><?= $response ?></span>
+				
+				<?php $responseIndex++;?>
 
-				?><span><?= 
-					$r 
-				?></span><span><?= 
-					($j < count($responseArray) - 1) ? $questions[$i]['separator'] : '.'
-				?></span><?php
-			
-			$j++;
-			endforeach; ?>
+			<?php endforeach; ?>
 
 		</p>
 
-		<?php $i++; ?>
+		<?php $chapterIndex++; ?>
 
-	<?php  endforeach; ?>
+	<?php endforeach; ?>
 
 </section>

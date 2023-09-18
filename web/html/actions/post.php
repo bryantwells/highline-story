@@ -13,10 +13,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Define the new object
         $newObject = array(
-            'q1' => $_POST['q1'],
-            'q2' => $_POST['q2'],
-            'q3' => $_POST['q3'],
-            'q4' => $_POST['q4']
+            'responses' => array(
+                'q1' => $_POST['q1'],
+                'q2' => $_POST['q2'],
+                'q3' => $_POST['q3'],
+                'q4' => $_POST['q4'],
+            ),
+            'meta' => array(
+                'time' => time(),
+            )
         );
 
         // Read the existing data from the JSON file if it exists
@@ -32,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         file_put_contents('../data.json', json_encode($data));
 
         // Response to the client
-        echo 'Data saved successfully.';
+        echo 'Thank you for your submission! <a href="/">Click here to view the story</a>.';
 
     } else {
 

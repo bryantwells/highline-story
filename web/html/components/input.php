@@ -9,30 +9,23 @@
 			action="/actions/post.php" 
 			method="post">
 
-			<?php foreach ($questions as $i => $question): ?>
-
-				<?php $id = 'q' . $i + 1 ?>
+			<?php foreach ($questions as $questionId => $question): ?>
 
 				<div class="Form-question">
 
 					<h2 class="Form-questionHeader">
-						<?= $questions[$i]['title'] ?>
+						<?= $questions[$questionId]['title'] ?>
 					</h2>
 
 					<div class="Form-inputGroup">
-						<label 
-							class="Form-label" 
-							for="<?= $id ?>">
-							<?= $questions[$i]['label'] ?>...
-						</label>
-
 						<div class="Form-textWrapper">
 							<textarea 
 								class="Form-input Form-input--textarea" 
 								rows="2"
-								id="<?= $id ?>" 
-								name="<?= $id ?>" 
+								id="<?= $questionId ?>" 
+								name="<?= $questionId ?>" 
 								onInput="this.parentNode.dataset.replicatedValue = this.value"
+								placeholder="<?= $questions[$questionId]['label'] ?>"
 								required></textarea>
 						</div>
 					</div>					

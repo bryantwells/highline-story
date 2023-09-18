@@ -26,10 +26,10 @@
 			if (is_numeric($index) && $index >= 0 && $index < count($data)) {
 
 				// Update the data at the specified index
-				$data[$index]['q1'] = $_POST['q1'];
-				$data[$index]['q2'] = $_POST['q2'];
-				$data[$index]['q3'] = $_POST['q3'];
-				$data[$index]['q4'] = $_POST['q4'];	
+				$data[$index]['responses']['q1'] = $_POST['q1'];
+				$data[$index]['responses']['q2'] = $_POST['q2'];
+				$data[$index]['responses']['q3'] = $_POST['q3'];
+				$data[$index]['responses']['q4'] = $_POST['q4'];
 
 				// Save the updated data back to the JSON file
 				file_put_contents('../data.json', json_encode($data));

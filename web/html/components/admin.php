@@ -4,22 +4,19 @@
 	<section
 		class="Section-body Section-body--admin">
 
-		<?php foreach ($data as $rId => $responseArray): ?>
+		<?php foreach ($entries as $entryId => $entry): ?>
 
 			<form 
 				class="Form Form-response"
 				action="/actions/update.php" 
 				method="post">
 
-				<?php $i = 0; ?>
-
-				<?php foreach ($responseArray as $response): ?>
-
-					<?php $qId = 'q' . $i + 1 ?>
+				<?php foreach ($entry['responses'] as $questionId => $response): ?>
 
 					<div class="Form-inputGroup">
+
 						<label class="Form-label">
-							<?= $questions[$i]['label'] ?>...
+							<?= $questionId ?>
 						</label>
 
 						<div 
@@ -27,15 +24,13 @@
 							<textarea
 								class="Form-input Form-input--textarea"
 								rows="1"
-								id="<?= $qId ?>" 
-								name="<?= $qId ?>" 
+								id="<?= $questionId ?>" 
+								name="<?= $questionId ?>" 
 								onInput="this.parentNode.dataset.replicatedValue = this.value"><?= 
 								$response
 							?></textarea>
 						</div>
 					</div>
-
-					<?php $i++; ?>
 					
 				<?php endforeach; ?>
 
@@ -55,7 +50,7 @@
 				<input 
 					type="hidden" 
 					name="index" 
-					value="<?= $rId ?>"
+					value="<?= $entryId ?>"
 				/>
 
 			</form>
