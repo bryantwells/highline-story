@@ -22,6 +22,9 @@
 		<p>
 			Climate Control is a solar-powered story, collectively written over the course of four days, between two locations: 10th & 14th, and 10th & 29th.
 		</p>
+		<p>
+			To add your voice, please <a href="/contribute.php">click here.
+		</p>
 	</footer>
 
 	<script src="/assets/js/main.js"></script>
