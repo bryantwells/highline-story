@@ -4,9 +4,10 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=sudo /usr/bin/python /home/bryant/dev/highline-story/display/run/main.py
+ExecStart=/usr/bin/python /home/bryant/dev/highline-story/display/run/main.py
 WorkingDirectory=/home/bryant/dev/highline-story/display/run/
 User=bryant
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
