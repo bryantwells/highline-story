@@ -58,7 +58,7 @@ def get(url):
 
     try:
 
-        return requests.get(url)
+        return requests.get(url=url)
     
     except Exception:
 
@@ -107,7 +107,7 @@ padding = 40
 while True:
 
     # Make GET request
-    request = requests.get(url=url)
+    request = get(url)
     entries = request.json()
 
     for entry in entries:
