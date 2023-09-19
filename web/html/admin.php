@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Climate Control: Admin</title>
 	<link rel="stylesheet" href="/assets/css/main.css">
+	<meta property="og:image" content="/apple.png" />
 </head>
 <body>
 
