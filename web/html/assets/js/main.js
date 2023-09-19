@@ -2,30 +2,35 @@ const forms = [...document.querySelectorAll('form')];
 forms.forEach((form) => {
 	form.addEventListener('submit', (e) => {
 
-		// Prevent the default form submission
-		e.preventDefault();
+		if (e.submitter) {
 
-		// Create a FormData object from the form
-		const formData = new FormData(form);
+			// Prevent the default form submission
+			e.preventDefault();
 
-		// Add submit button value
-		formData.append(e.submitter.name, e.submitter.value);
+			// Create a FormData object from the form
+			const formData = new FormData(form);
 
-		// Send a POST request to your PHP script
-		fetch(form.action, {
-			method: 'POST',
-			body: formData
-		})
-		.then(async function(response) {
-			const body = await response.text();
-			console.log(body);
-		})
-		.catch(function(error) {
-			console.error('Error:', error);
-		})
-		.finally(function() {
-			location.reload();
-		});
+			// Add submit button value
+			formData.append(e.submitter.name, e.submitter.value);
+
+			// Send a POST request to your PHP script
+			fetch(form.action, {
+				method: 'POST',
+				body: formData
+			})
+			.then(async function(response) {
+				const body = await response.text();
+				console.log(body);
+			})
+			.catch(function(error) {
+				console.error('Error:', error);
+			})
+			.finally(function() {
+				location.reload();
+			});
+			
+		}
+		
 	});
 });
 
