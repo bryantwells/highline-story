@@ -1,0 +1,4 @@
+RPi.GPIO
+pillow>=9.5.0
+Wand
+requests
