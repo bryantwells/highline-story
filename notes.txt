@@ -1,0 +1,12 @@
+[Unit]
+Description=Climate Control Display Server
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/bryant/dev/highline-story/display/run/main.py
+WorkingDirectory=/home/bryant/dev/highline-story/display/run/
+User=bryant
+
+[Install]
+WantedBy=multi-user.target

@@ -54,6 +54,20 @@ def wrap_text(text, font, max_width):
         # Return the lines
         return lines
 
+def get(url):
+
+    try:
+
+        return requests.get(url)
+    
+    except Exception:
+
+        # sleep for a bit in case that helps
+        sleep(1)
+
+        # try again
+        return get(url)
+
 # Initialize
 print('Initializing EPD...')
 
@@ -93,7 +107,7 @@ padding = 40
 while True:
 
     # Make GET request
-    request = requests.get(url=url)
+    request = get(url)
     entries = request.json()
 
     for entry in entries:
