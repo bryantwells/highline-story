@@ -11,8 +11,8 @@
 
 	<header class="Header">
 		<h1>
-			Climate Control
-			<br> A 10th Ave. Story
+			CLIMATE CONTROL
+			<br> A 10TH AVENUE STORY
 		</h1>
 	</header>
 
@@ -21,7 +21,7 @@
 
 	<footer class="Footer">
 		<p>
-			Climate Control is a solar-powered story, collectively written over the course of four days, between two locations: 10th & 14th, and 10th & 29th.
+		CLIMATE CONTROL: A 10TH AVENUE STORY is a solar-powered digital project. Made at two different stand locations on 10th Avenue at 26th Street and 15th Street on the Highline Sun Deck, where you help to write a collective story to imagine and create a healthy climate for all of us.
 		</p>
 		<p>
 			To add your voice, please <a href="/contribute.php">click here.
