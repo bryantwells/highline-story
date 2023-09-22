@@ -150,4 +150,4 @@ while True:
             display.draw_full(constants.DisplayModes.GC16)
 
             # Sleep
-            sleep(20)
+            sleep(15)
